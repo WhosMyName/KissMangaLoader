@@ -1,0 +1,84 @@
+well there's more kissmanaga than expected
+
+
+KissManga.in:
+
+Manga Url (FrontPage):
+https://kissmanga.in/kissmanga/rise-of-the-demon-king/
+
+Chapters:
+<a href="https://kissmanga.in/kissmanga/rise-of-the-demon-king/chapter-137/">chapter 137</a>
+JS?
+
+Chapter Url:
+https://kissmanga.in/kissmanga/rise-of-the-demon-king/chapter-137/
+
+
+Images:
+
+<img id="image-0" src="https://kissmanga.in/wp-content/uploads/WP-manga/data/manga_5e7f45c3edf10/chapter-137/1-24.jpg" class="wp-manga-chapter-img">
+
+KissManga.cc
+
+URL:
+http://kissmanga.cc/manga/sesame-salt-and-pudding
+
+In Manga:
+<a href="http://kissmanga.cc/sesame-salt-and-pudding-chapter-7" title="Sesame Salt And Pudding Chapter 7">Sesame Salt And Pudding Chapter 7</a>
+
+
+In chapter:
+url:
+http://kissmanga.cc/sesame-salt-and-pudding-chapter-7
+
+elem:
+<option value="https://cm.blazefast.co/e4/f3/e4f37d1f37e82650d07fc13d5fe213e8.jpg">31/31</option>
+
+KissManga.org
+
+In Manga:
+url:
+https://kissmanga.org/manga/du920867
+
+elem:
+<a href="/chapter/du920867/chapter_29" title="Read The Archmage's Daughter Manga online "> The Archmage's Daughter - Chapter 29</a>
+
+In chapter
+url:
+https://kissmanga.org/chapter/du920867/chapter_33
+
+elem:
+<img src="https://cm.blazefast.co/9f/f7/9ff7a18242d2fcaaf57c5efb9de9571e.jpg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
