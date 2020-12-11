@@ -3,6 +3,9 @@ well there's more kissmanaga than expected
 
 KissManga.in:
 
+<meta property="og:title" content="Rise of The Demon King"/>
+
+
 Manga Url (FrontPage):
 https://kissmanga.in/kissmanga/rise-of-the-demon-king/
 
