@@ -47,7 +47,10 @@ def parse_cc_chaper_list(data: str) -> dict:
 
 def parse_cc_chapter_images(data: str) -> list:
     """ parses all image urls from a given chapter """
-    pass
+    data = open_file("/home/koro/Documents/GitKrakken/KissMangaLoader/kissmanga.cc.inchapter.html")
+    strainer = SoupStrainer(id="arraydata")
+    soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
+    return soup.contents[0].string.split(","):
 
 #######################################ORG######################################
 
@@ -131,6 +134,7 @@ def __main__():
     print(parse_in_manga_name(""))
     print(parse_org_manga_name(""))
     print(parse_cc_chaper_list(""))
+    print(parse_cc_chapter_images(""))
 
 
 if __name__ == "__main__":
