@@ -20,7 +20,7 @@ https://kissmanga.in/kissmanga/rise-of-the-demon-king/chapter-137/
 Images:
 
 <img id="image-0" src="https://kissmanga.in/wp-content/uploads/WP-manga/data/manga_5e7f45c3edf10/chapter-137/1-24.jpg" class="wp-manga-chapter-img">
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 KissManga.cc
 
 URL:
@@ -36,7 +36,7 @@ http://kissmanga.cc/sesame-salt-and-pudding-chapter-7
 
 elem:
 <option value="https://cm.blazefast.co/e4/f3/e4f37d1f37e82650d07fc13d5fe213e8.jpg">31/31</option>
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 KissManga.org
 
 In Manga:
