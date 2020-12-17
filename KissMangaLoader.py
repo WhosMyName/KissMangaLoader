@@ -36,8 +36,8 @@ def parse_cc_manga_name(data: str) -> str:
     soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
     return soup.contents[0].contents[0]
 
-def parse_cc_chaper_list(data: str) -> dict:
-    """ parses and returns the mangas chapters as dict """
+def parse_cc_chaper_list(data: str) -> list:
+    """ parses and returns the mangas chapters as list """
     data = open_file(f"{CWD}kissmanga.cc.inmanga.html")
     strainer = SoupStrainer(class_="chapter-list")
     soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
@@ -46,7 +46,7 @@ def parse_cc_chaper_list(data: str) -> dict:
         if not isinstance(elem, bs4Tag):
             continue
         chapters.append({"chapterUrl": elem.a["href"], "chapterName": elem.p.contents[0].split(": ")[1]})
-    return chapters # .reverse()
+    return chapters # [::-1] # reverse the list
 
 def parse_cc_chapter_images(data: str) -> list:
     """ parses all image urls from a given chapter """
@@ -65,7 +65,7 @@ def parse_org_manga_name(data: str) -> str:
     return soup.contents[0].contents[0]
 
 def parse_org_chaper_list(data: str) -> list:
-    """ parses and returns the mangas chapters as dict """
+    """ parses and returns the mangas chapters as list """
     data = open_file(f"{CWD}kissmanga.org.inmanga.html")
     strainer = SoupStrainer(class_="listing listing8515 full")
     soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
@@ -78,12 +78,23 @@ def parse_org_chaper_list(data: str) -> list:
             continue
         chapterName =  elem.a.contents[0].replace("\n", "").strip()
         chapterName = re.sub(rePattern, " ", chapterName)
-        chapters.append({"chapterUrl": elem.a["href"], "chapterName": chapterName})
-    return chapters.reverse()
+        chapters.append({"chapterUrl": f"https://kissmanga.org{elem.a['href']}", "chapterName": chapterName})
+    return chapters[::-1] # reverse the list
 
-def parse_org_chapter_images():
+def parse_org_chapter_images(data: str) -> list:
     """ parses all image urls from a given chapter """
-    pass
+    data = open_file(f"{CWD}kissmanga.org.inchapter.html")
+    strainer = SoupStrainer(id="centerDivVideo")
+    soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
+    imageUrlList = []
+    for elem in soup.contents[0]:
+        if not isinstance(elem, bs4Tag):
+            continue
+        if elem.name != "img":
+            continue
+        imageUrlList.append(elem["src"])
+    return imageUrlList
+        
 
 #######################################IN#######################################
 
@@ -94,11 +105,14 @@ def parse_in_manga_name(data: str) -> str:
     soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
     return soup.contents[0].contents[0]
 
-def parse_in_chaper_list():
-    """ parses and returns the mangas chapters as dict """
-    pass
+def parse_in_chaper_list(data: str) -> list:
+    """ parses and returns the mangas chapters as list """
+    data = open_file(f"{CWD}kissmanga.in.inmanga.html")
+    strainer = SoupStrainer()
+    soup = BeautifulSoup(data, "html.parser", parse_only=strainer)
 
-def parse_in_chapter_images():
+
+def parse_in_chapter_images(data: str) -> list:
     """ parses all image urls from a given chapter """
     pass
 
@@ -155,7 +169,8 @@ def __main__():
     #print(parse_org_manga_name(""))
     #print(parse_cc_chaper_list(""))
     #print(parse_cc_chapter_images(""))
-    print(parse_org_chaper_list(""))
+    #print(parse_org_chaper_list(""))
+    print(parse_org_chapter_images(""))
 
 
 if __name__ == "__main__":
